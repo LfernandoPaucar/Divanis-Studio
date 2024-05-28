@@ -1,0 +1,3 @@
+# ignorar la carpeta node model
+
+node_modules/
