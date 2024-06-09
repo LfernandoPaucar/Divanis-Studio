@@ -24,6 +24,10 @@ h3 {
 }
 
 /* Esta seccion es del header */
+.servicios {
+  margin-top: 30px;
+}
+
 .menu-dinamico {
   display: flex;
   align-items: center;
@@ -52,7 +56,6 @@ h3 {
   list-style: none;
   scroll-behavior: smooth;
   width: 100%;
-  height: 40px;
 }
 
 .subMenu-servicio {
@@ -168,16 +171,16 @@ body {
 
 .general-contenedor {
   display: grid;
-  width: auto;
+  width: 100%;
   max-width: 100%;
   height: auto;
   justify-self: auto;
-  padding: 12px 5% 12px 3%;
+  padding: 12px 2% 12px 2%;
   margin-top: 10px;
   margin-left: 0px;
   margin-right: 0px;
   grid-gap: 20px;
-  grid-template-columns: repeat(4, 25%);
+  grid-template-columns: repeat(4, auto);
   grid-template-rows: 30% 20% 35% 12%;
   align-content: stretch;
   align-items: center;
@@ -554,7 +557,8 @@ body {
   grid-template-columns: repeat(3, 1fr);
   align-content: space-around;
   align-items: center;
-  width: 100%;
+  width: 97%;
+  max-width: 100%;
   background-color: rgba(217, 147, 121, 0.4039215686);
   margin-top: 20px;
   padding: 1rem;
@@ -832,6 +836,135 @@ body {
     align-content: center;
     border-radius: 60%;
     object-fit: cover;
+  }
+}
+@media screen and (max-width: 480px) {
+  .general-contenedor {
+    display: grid;
+    grid-template-columns: repeat(12, auto);
+    grid-template-rows: repeat(12, auto);
+    width: 80%;
+    max-width: 100%;
+    margin-right: 20px;
+  }
+  .general-contenedor h1 {
+    font-size: 2.8rem;
+  }
+  .general-contenedor h2 {
+    font-size: 2.2rem;
+  }
+  .general-contenedor p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .servicios {
+    margin-top: 20px;
+    margin-right: 40px;
+  }
+  .servicios .secciones-home {
+    width: 480px;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .servicios .contenedor-service {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .servicios .contenedor-service .caja-service {
+    display: flex;
+    flex-direction: column;
+  }
+  .servicios .contenedor-service .caja-service .info-service-girl {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .promociones-general {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-content: center;
+    justify-content: center;
+    width: 480px;
+  }
+  .promociones-general .container-promociones {
+    width: 450px;
+  }
+  .opiniones {
+    margin-right: 20px;
+  }
+  .opiniones .contenedor-opiniones {
+    width: 480px;
+    margin-right: 20px;
+  }
+  .opiniones .contenedor-opiniones .cajaOpinion {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 480px;
+  }
+  #map {
+    display: flex;
+    flex-direction: column;
+    width: 460px;
+  }
+  .footer .container {
+    width: 100%;
+  }
+  .general-container-productos {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(12, auto);
+  }
+  .banner-ellas {
+    background-image: url("./../source/para-ellas.jpg");
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 45vh;
+    object-fit: cover;
+    color: white;
+  }
+  .main-ellos-ellas .contenedor-de-paginas {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  .container-ellas .tipos-servicios {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(12, auto);
+    justify-content: center;
+    align-content: center;
+  }
+  .container-ellas .tipos-servicios .servicio-item {
+    width: 340px;
+    height: 240px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .container-ellos .tipos-servicios-ellos {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(12, auto);
+    justify-content: center;
+    align-content: center;
+  }
+  .container-ellos .tipos-servicios-ellos .servicio-item-hombre {
+    width: 340px;
+    height: 240px;
   }
 }
 

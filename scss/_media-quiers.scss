@@ -1,1 +1,170 @@
 $font-p: 16px;
+$font-h2: 2.2rem;
+$font-h1: 2.8rem;
+$Rosado-oscuro: #d9755fa9;
+$Black-sise: #0000;
+$Ancho-mobile: 480px;
+
+
+// Condicionales view port
+$Vista: mobile;
+@mixin responsive-mobile-grid($columnas,$filas){
+    display: grid;
+    grid-template-columns: $columnas;
+    grid-template-rows: $filas;
+}
+
+
+.general-contenedor{
+    @if $Vista == mobile{
+        @media screen and (max-width: 480px){
+        display: grid;
+        grid-template-columns: repeat(12, auto);
+        grid-template-rows: repeat(12, auto);
+        width: 80%;
+        max-width: 100%;
+        margin-right: 20px;
+        h1{
+            font-size: $font-h1;
+        }
+        h2{
+            font-size: $font-h2;
+        }
+
+        p{
+            font-size: $font-p;
+        }
+        }
+    }
+}
+
+.servicios{
+    @if $Vista == mobile{
+        @media screen and (max-width: 480px){
+            margin-top: 20px;
+        margin-right: 40px;
+        .secciones-home{
+            width: $Ancho-mobile;
+            height: auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .contenedor-service{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            
+            .caja-service{
+                display: flex;
+                flex-direction: column;
+                .info-service-girl{
+                    padding: 10px;
+                }
+            }
+        }
+        }
+    }
+}
+
+@media screen and (max-width: 480px){
+    .promociones-general{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-content: center;
+        justify-content: center;
+        width: $Ancho-mobile;
+        .container-promociones{
+            width: 450px;
+        }
+    }
+
+    .opiniones {
+        margin-right: 20px;
+        .contenedor-opiniones{
+            width: $Ancho-mobile;
+            margin-right: 20px;
+            .cajaOpinion{
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: center;
+                width: $Ancho-mobile;
+            }
+        }
+    }
+    
+    #map{
+        display: flex;
+        flex-direction: column;
+        width: 460px;
+    }
+
+    .footer{
+        .container{
+            width: 100%;
+        
+        }
+    }
+
+    .general-container-productos{
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows: repeat(12, auto);
+    }
+
+    .banner-ellas {
+        background-image: url("./../source/para-ellas.jpg");
+        background-color: black;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 45vh;
+        object-fit: cover;
+        color: white;
+    }
+    
+    .main-ellos-ellas{
+        .contenedor-de-paginas{
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        
+    }
+
+    .container-ellas{
+        .tipos-servicios{
+            @include responsive-mobile-grid(repeat(1, auto),repeat(12,auto));
+            justify-content: center;
+            align-content: center;
+            .servicio-item{
+                width: 340px;
+                height: 240px;
+            }
+        }
+    }
+}
+
+.container-ellos{
+    @if $Vista == mobile{
+        @media  screen and (max-width: 480px){
+            .tipos-servicios-ellos{
+                @include responsive-mobile-grid(repeat(1, auto),repeat(12,auto));
+                justify-content: center;
+                align-content: center;
+                .servicio-item-hombre{
+                    width: 340px;
+                    height: 240px;
+                }
+            }
+        }
+
+}
+}
