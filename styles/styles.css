@@ -416,7 +416,7 @@ body {
   justify-content: space-around;
   padding: 20px;
   font-size: 1.1rem;
-  margin-top: 8%;
+  margin-top: 2%;
 }
 
 #map .mapa {
@@ -966,6 +966,10 @@ body {
     width: 340px;
     height: 240px;
   }
+}
+
+.cajaOpinion {
+  background-image: linear-gradient(to right, #BF8085, #BF8580, #D9ADAD, #F2E4E4);
 }
 
 /*# sourceMappingURL=styles.css.map */
