@@ -8,84 +8,93 @@ $Ancho-mobile: 480px;
 
 // Condicionales view port
 $Vista: mobile;
-@mixin responsive-mobile-grid($columnas,$filas){
+
+@mixin responsive-mobile-grid($columnas, $filas) {
     display: grid;
     grid-template-columns: $columnas;
     grid-template-rows: $filas;
 }
 
 
-.general-contenedor{
-    @if $Vista == mobile{
-        @media screen and (max-width: 480px){
-        display: grid;
-        grid-template-columns: repeat(12, auto);
-        grid-template-rows: repeat(12, auto);
-        width: 80%;
-        max-width: 100%;
-        margin-right: 20px;
-        h1{
-            font-size: $font-h1;
-        }
-        h2{
-            font-size: $font-h2;
-        }
+.general-contenedor {
+    @if $Vista ==mobile {
+        @media screen and (max-width: 480px) {
+            display: grid;
+            grid-template-columns: repeat(12, auto);
+            grid-template-rows: repeat(12, auto);
+            width: 80%;
+            max-width: 100%;
+            margin-right: 20px;
 
-        p{
-            font-size: $font-p;
-        }
+            h1 {
+                font-size: $font-h1;
+            }
+
+            h2 {
+                font-size: $font-h2;
+            }
+
+            p {
+                font-size: $font-p;
+            }
         }
     }
 }
 
-.servicios{
-    @if $Vista == mobile{
-        @media screen and (max-width: 480px){
+.servicios {
+    @if $Vista ==mobile {
+        @media screen and (max-width: 480px) {
             margin-top: 20px;
-        margin-right: 40px;
-        .secciones-home{
-            width: $Ancho-mobile;
-            height: auto;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-        .contenedor-service{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;
-            
-            .caja-service{
+            margin-right: 40px;
+
+            .secciones-home {
+                width: $Ancho-mobile;
+                height: auto;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+            .contenedor-service {
                 display: flex;
                 flex-direction: column;
-                .info-service-girl{
-                    padding: 10px;
+                justify-content: center;
+                text-align: center;
+
+                .caja-service {
+                    display: flex;
+                    flex-direction: column;
+
+                    .info-service-girl {
+                        padding: 10px;
+                    }
                 }
             }
         }
-        }
     }
 }
 
-@media screen and (max-width: 480px){
-    .promociones-general{
+@media screen and (max-width: 480px) {
+    .promociones-general {
         display: flex;
         flex-direction: column;
         gap: 20px;
         align-content: center;
         justify-content: center;
         width: $Ancho-mobile;
-        .container-promociones{
+
+        .container-promociones {
             width: 450px;
         }
     }
 
     .opiniones {
         margin-right: 20px;
-        .contenedor-opiniones{
+
+        .contenedor-opiniones {
             width: $Ancho-mobile;
             margin-right: 20px;
-            .cajaOpinion{
+
+            .cajaOpinion {
                 display: flex;
                 flex-direction: column;
                 justify-content: start;
@@ -94,21 +103,21 @@ $Vista: mobile;
             }
         }
     }
-    
-    #map{
+
+    #map {
         display: flex;
         flex-direction: column;
         width: 460px;
     }
 
-    .footer{
-        .container{
+    .footer {
+        .container {
             width: 100%;
-        
+
         }
     }
 
-    .general-container-productos{
+    .general-container-productos {
         display: grid;
         grid-template-columns: repeat(1, auto);
         grid-template-rows: repeat(12, auto);
@@ -124,9 +133,9 @@ $Vista: mobile;
         object-fit: cover;
         color: white;
     }
-    
-    .main-ellos-ellas{
-        .contenedor-de-paginas{
+
+    .main-ellos-ellas {
+        .contenedor-de-paginas {
             display: flex;
             flex-direction: row;
             align-content: center;
@@ -136,15 +145,16 @@ $Vista: mobile;
             height: 100%;
         }
 
-        
+
     }
 
-    .container-ellas{
-        .tipos-servicios{
-            @include responsive-mobile-grid(repeat(1, auto),repeat(12,auto));
+    .container-ellas {
+        .tipos-servicios {
+            @include responsive-mobile-grid(repeat(1, auto), repeat(12, auto));
             justify-content: center;
             align-content: center;
-            .servicio-item{
+
+            .servicio-item {
                 width: 340px;
                 height: 240px;
             }
@@ -152,19 +162,20 @@ $Vista: mobile;
     }
 }
 
-.container-ellos{
-    @if $Vista == mobile{
-        @media  screen and (max-width: 480px){
-            .tipos-servicios-ellos{
-                @include responsive-mobile-grid(repeat(1, auto),repeat(12,auto));
+.container-ellos {
+    @if $Vista ==mobile {
+        @media screen and (max-width: 480px) {
+            .tipos-servicios-ellos {
+                @include responsive-mobile-grid(repeat(1, auto), repeat(12, auto));
                 justify-content: center;
                 align-content: center;
-                .servicio-item-hombre{
+
+                .servicio-item-hombre {
                     width: 340px;
                     height: 240px;
                 }
             }
         }
 
-}
+    }
 }

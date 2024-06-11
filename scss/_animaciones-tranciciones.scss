@@ -1,7 +1,52 @@
-.cajaOpinion{
+.cajaOpinion {
     background-image: linear-gradient(to right,
-    #BF8085,
-    #BF8580,
-    #D9ADAD,
-    #F2E4E4)
+            #BF8085,
+            #BF8580,
+            #D9ADAD,
+            #F2E4E4)
+}
+
+.social-link {
+    ul {
+        .fa {
+            transition: transform 1s ease;
+        }
+    }
+}
+
+.social-link {
+    ul {
+        a:hover {
+            transform: scale(1.2);
+        }
+    }
+}
+
+article {
+    section {
+        position: relative;
+        animation: move 1.5s linear;
+    }
+
+    @keyframes move {
+        from {
+            transform: translateX(-400px);
+        }
+    }
+}
+
+#fundadora {
+    position: relative;
+    animation: move 1.0s linear;
+}
+
+@keyframes move {
+    from {
+        transform: translateX(400px);
+    }
+}
+
+#quienes-somos {
+    position: relative;
+    animation: move 1.0s linear;
 }
