@@ -6,6 +6,24 @@
             #F2E4E4)
 }
 
+.container-nosotros{
+    section{
+        background-image: linear-gradient(to top,
+                #ffa8a8be,
+                #ffd8d5d3,
+                #f7ad9a,
+                #fad5ca)
+    }
+}
+
+.tipos-servicios-ellos{
+    background-image: linear-gradient(to top right,
+            #ff0000,
+            #ffffff,
+            #3c60ff,
+            #ffffff)
+}
+
 .social-link {
     ul {
         .fa {
@@ -50,3 +68,4 @@ article {
     position: relative;
     animation: move 1.0s linear;
 }
+

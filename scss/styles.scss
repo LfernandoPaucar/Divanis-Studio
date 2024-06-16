@@ -33,7 +33,7 @@ h3 {
 }
 
 .menu-dinamico {
-    position: fixed;
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -48,7 +48,7 @@ h3 {
 }
 
 .main-container {
-    position: absolute;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -90,10 +90,11 @@ h3 {
 }
 
 .main-container li:hover .subMenu-servicio {
+    position: absolute;
     display: block;
     visibility: visible;
     opacity: 1;
-
+    background-color: black;
 }
 
 .logo-divanis {
@@ -134,10 +135,27 @@ h3 {
     display: inline-block;
 }
 
-.page-display,
+
+
 .page {
     overflow: hidden;
     display: inline-block;
+    padding: 10px 30px;
+    color: white;
+    text-decoration: none;
+    margin: 5px;
+    margin-right: 5px;
+    text-decoration: none;
+    position: relative;
+    letter-spacing: none;
+    z-index: 1;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.page-display{
+    overflow: hidden;
+    display: flex;
     padding: 10px 30px;
     color: white;
     text-decoration: none;
@@ -543,18 +561,16 @@ body {
 
 /* Seccion para page para ellas */
 
-.banner-ellas {
-    width: auto;
-    height: 80vh;
-}
+
 
 .main-ellos-ellas .contenedor-de-paginas {
     display: flex;
     flex-direction: row;
-    height: 15vh;
+    height: 10vh;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 5% 10px 5%;
+    padding-left: 30px;
+    padding-right: 30px;
     font-weight: bold;
     background-color: #a06651d3;
     margin: 0px;
@@ -617,9 +633,14 @@ body {
     border-radius: 30%;
 }
 
-.banner-ellas {
+.capa-banner {
     background-image: url("./../source/para-ellas.jpg");
     height: 70vh;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: black;
     background-attachment: fixed;
     background-size: 220vh 100vh;
@@ -629,26 +650,40 @@ body {
     color: white;
 }
 
-.banner-ellas>h1 {
-    margin: 0px;
+
+
+.capa-banner > h1 {
+    width: 30%;
+    border: 5px solid white;
+    border-radius: 2.5px;
+    background-color: #00000060; 
 }
 
 /* Seccion para ellos */
 
 .banner-ellos {
     background-image: url("./../source/bannerellos.jpg");
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 70vh;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.103);
     background-attachment: fixed;
     background-size: 220vh 100vh;
     background-repeat: no-repeat;
     background-position: center;
     object-fit: cover;
     color: white;
+    text-align: center;
 }
 
 .banner-ellos>h1 {
-    margin: 0px;
+    width: 30%;
+    border: 5px solid white;
+    border-radius: 2.5px;
+    background-color: #00000060; 
 }
 
 .container-ellos {
@@ -794,20 +829,17 @@ body {
     display: flex;
     flex-direction: column;
     height: auto;
-    width: auto;
+    width: 100%;
     justify-content: center;
-    margin-left: 50px;
-    margin-right: 50px;
-    padding: 2rem;
 }
 
 .container-nosotros section {
     display: flex;
-    background-color: #d99379be;
+    background-color: #d993799a;
     margin: 20px 0px;
     padding: 1rem;
     gap: 30px;
-    border-radius: 20px;
+    border-radius: 10px;
     text-align: center;
     color: #F2F2F2;
 }
@@ -834,7 +866,7 @@ body {
         width: auto;
         top: 0;
         right: 0;
-        
+        width: auto;
     }
 
     .menu-dinamico .main-container {
@@ -846,18 +878,30 @@ body {
         margin: 0px;
         padding: 0px;
         background-color: black;
-        width: 100%;
+        width: auto;
         bottom: 0;
         background-color: #000000;
-        padding: 0.5rem;
-        gap: 5px;
+        gap: 0px;
         li{
             a{
                 padding-left: 10px;
                 padding-right: 10px;
+                font-size: 16px;
                 border: 2px solid rgba(158, 122, 22, 0.685);
         }
         }
+    }
+
+    .main-container li:hover .subMenu-servicio {
+        position: absolute;
+        display: inline-flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        visibility: visible;
+        opacity: 1;
+        background-color: black;
     }
 
     .container-marcas {
