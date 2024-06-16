@@ -14,7 +14,7 @@
     display: inline-block;
     margin: 0;
     max-width: 100%;
-    background-color: #a59c22;
+    background-color: rgb(243, 188, 70);
     color: #fff;
     overflow: hidden;
     -webkit-backface-visibility: hidden;
@@ -32,7 +32,7 @@
 
 [class^="imghvr-"] figcaption,
 [class*=" imghvr-"] figcaption {
-    background-color: rgb(214, 188, 41);
+    background-color: rgb(243, 188, 70);
     padding: 30px;
     position: absolute;
     top: 0;
