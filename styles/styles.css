@@ -60,6 +60,8 @@ h3 {
 
 .subMenu-servicio {
   position: absolute;
+  display: flex;
+  flex-direction: row;
   background-color: #000000;
   text-decoration: none;
   list-style: none;
@@ -76,7 +78,8 @@ h3 {
 }
 
 .subMenu-servicio li a:hover {
-  display: block;
+  display: flex;
+  flex-direction: row;
   padding: 10px 15px;
   color: #000000;
   background-color: rgb(243, 188, 70);
@@ -86,7 +89,9 @@ h3 {
 
 .main-container li:hover .subMenu-servicio {
   position: absolute;
-  display: block;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   visibility: visible;
   opacity: 1;
   background-color: black;
@@ -179,6 +184,10 @@ h3 {
 }
 
 /* Esta seccion es del header */
+.banner {
+  margin-top: 35px;
+}
+
 /* Esta seccion es del body */
 body {
   background-color: #fff;
@@ -843,6 +852,9 @@ body {
     opacity: 1;
     background-color: black;
   }
+  .banner {
+    margin-top: 0px;
+  }
   .container-marcas {
     display: flex;
     flex-direction: column;
@@ -961,7 +973,6 @@ body {
   }
   .opiniones .contenedor-opiniones {
     width: 480px;
-    margin-right: 20px;
   }
   .opiniones .contenedor-opiniones .cajaOpinion {
     display: flex;
@@ -969,6 +980,9 @@ body {
     justify-content: start;
     align-items: center;
     width: 480px;
+    width: 450px;
+    margin-left: 5px;
+    margin-right: 3rem;
   }
   #map {
     display: flex;
