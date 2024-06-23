@@ -856,6 +856,9 @@ body {
   .banner {
     margin-top: 0px;
   }
+  .contenedor-service > .caja-service {
+    margin: 0px 100px 20px 5px;
+  }
   .container-marcas {
     display: flex;
     flex-direction: column;
